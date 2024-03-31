@@ -1,0 +1,36 @@
+<!-- Import the component -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: none;
+    position: relative;
+  }
+
+  model-viewer {
+    width: 100%;
+    height: 100vh;
+  }
+
+
+  button[slot="ar-button"] {
+    border-radius: 32px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent
+    border: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 2%;
+    right: 2%;
+    padding: 0;
+</style>
+
+<model-viewer id="model" ar camera-controls auto-rotate preload src="../static/projects/{{ username }}/{{ projectname }}/model.glb" alt="3D Model">
+  <button slot="ar-button" style="background-image: url('../../static/ar_assets/enter_ar.png');"></button>
+</model-viewer>

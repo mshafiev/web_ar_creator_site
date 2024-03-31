@@ -1,0 +1,181 @@
+{% extends 'main/base.html' %}
+
+{% block title %}главная{% endblock %}
+
+{% block content %}
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <div class="app-content">
+                <div class="content-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="page-description">
+                                    <h1>Главная</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="card widget widget-info">
+                                <div class="card-body">
+                                        <div class="widget-info-container">
+                                            <h5 class="widget-info-title">Готовые примеры для тестирования</h5>
+                                        </div>
+                                    </div>
+                                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="10000">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <model-viewer src="../../static/assets/models/1.glb" alt="3D-model" auto-rotate camera-controls ar environment- style="width: 80%; height: 300px;"></model-viewer>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="widget-info-container">
+                                                    <a href="{% url 'index' %}static/assets/models/1.glb" class="btn btn-primary widget-info-action">скачать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <model-viewer src="../../static/assets/models/5.glb" alt="3D-model" auto-rotate camera-controls ar environment- style="width: 80%; height: 300px;"></model-viewer>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="widget-info-container">
+                                                    <a href="{% url 'index' %}static/assets/models/5.glb" class="btn btn-primary widget-info-action">скачать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <model-viewer src="../../static/assets/models/3.glb" alt="3D-model" auto-rotate camera-controls ar environment- style="width: 80%; height: 300px;"></model-viewer>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="widget-info-container">
+                                                    <a href="{% url 'index' %}static/assets/models/3.glb" class="btn btn-primary widget-info-action">скачать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <model-viewer src="../../static/assets/models/4.glb" alt="3D-model" auto-rotate camera-controls ar environment- style="width: 80%; height: 300px;"></model-viewer>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="widget-info-container">
+                                                    <a href="{% url 'index' %}static/assets/models/4.glb" class="btn btn-primary widget-info-action">скачать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item " data-bs-interval="10000">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <model-viewer src="../../static/assets/models/2.glb" alt="3D-model" auto-rotate camera-controls ar environment- style="width: 80%; height: 300px;"></model-viewer>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="widget-info-container">
+                                                    <a href="{% url 'index' %}static/assets/models/2.glb" class="btn btn-primary widget-info-action">скачать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+
+                        <div class="row" style="display: flex; justify-content: center;">
+                            <div class="col-xl-6">
+                                <div class="card widget widget-info">
+                                    <div class="card-body">
+                                        <div class="widget-info-container">
+                                            <div class="widget-info-image" style="background: url('static/assets/images/widgets/editor.png')"></div>
+                                            <h5 class="widget-info-title">F-editor</h5>
+                                            <p class="widget-info-text">Редактируйте свои модели прямо в браузере с помощью F-editor!</p>
+                                            <a href="http://90.156.206.53:5000/static/editor/index.html" class="btn btn-primary widget-info-action">F-editor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="display: flex; justify-content: center;">
+                           <div class="col-xl-5">
+                                <div class="card widget widget-chat">
+                                    <div class="card-header">
+                                        <!-- can be widget-chat-inactive-user for red dot -->
+                                        <h5 class="card-title widget-chat-active-user">Поддержка</h5>
+                                    </div>
+                                    <div class="widget-chat-messages-container">
+                                        <div class="widget-chat-message-item">
+                                            <img src="static/assets/images/avatars/avatar.png" alt="">
+                                            <div class="widget-chat-message-item-content">
+                                                <div class="widget-chat-message-item-text">
+                                                    Обращение на сайте пока не работает, но мы из-за всех сил пытаемся это исправить
+                                                </div>
+                                                <div class="widget-chat-message-item-text">
+                                                    А пока пишите в телеграмм @m_shafiev или на почту main@fra1l.ru
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="widget-chat-message-item own">
+                                            <img src="static/assets/images/avatars/avatar.png" alt="">
+                                            <div class="widget-chat-message-item-content">
+                                                <div class="widget-chat-message-item-text">
+                                                    Я студент и хочу лицензию, как мне ее получить?
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="widget-chat-compose">
+                                        <input class="widget-chat-compose-input" type="text" placeholder="Пишите..">
+                                        <button class="widget-chat-compose-send-btn"><i class="material-icons">arrow_forward_ios</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5">
+                                <div class="card widget widget-info">
+                                    <div class="card-body">
+                                        <div class="widget-info-container">
+                                            <div class="widget-info-image" style="background: url('static/assets/images/widgets/tecnology.png')"></div>
+                                            <h5 class="widget-info-title">Кто мы?</h5>
+                                            <p class="widget-info-text">Проект f-ar был создан компанией fra1l.ru. <br> О нас и о наших проектах вы можете прочитать на сайте. </p>
+                                            <a href="https://fra1l.ru" class="btn btn-primary widget-info-action">сайт fra1l</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card widget widget-info-inline">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Больше с Премиум<span class="badge badge-info badge-style-light">Premium</span></h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="widget-info-container">
+                                            <p class="widget-info-text">Больше моделей и больше просмотров, а так же приоритетная поддержка и скоростная загрузка файлов. </p>
+                                            <a href="{% url 'buy' %}" class="btn btn-outline-primary widget-info-action">Планы</a>
+                                            <div class="widget-info-image" style="background: url('static/assets/images/widgets/speed.svg')"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+{% endblock %}
